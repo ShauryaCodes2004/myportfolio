@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio shaurya rakesh</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/795e0f8d73.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="headertext">
+            <p>programmer</p>
+            <h1>hi, iam <span>shaurya rakesh</span><br> from india</h1>
+        </div>
+    </div>
+
+</div>
+<!---------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/phonebackground.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About ME</h1>
+                <p>As a highly motivated and ambitious college student with a passion for technology, I possess a solid
+                    foundation in programming languages.I have gained practical experience through self Projects. With a
+                    strong work ethic and a dedication to excellence, I am committed to pursuing a career in the tech industry
+                    and am eager to contribute to innovative projects that make a positive impact on society by sticking to the
+                    deadline.
+                </p>
+                <div class="tabtitles">
+                    <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+                    
+                    <p class="tablinks" onclick="opentab('education')">education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>programmer</span><br>and desinging interfaces</li>
+                        <li><span>web devlopment</span><br>designing web pages</li>
+                        <li><span>android  devlopment</span><br>building apps </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>school</span><br>vishwa bharati public school sec 28 noida </li>
+                        <li><span>colllege</span><br>iimt college of engineering greater noida</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- services -->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">my services</h1>
+        <div class="serviceslist">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>web devlopment</h2>
+                <p>software engineer with a proven ability to adapt in both self-starting and collaborative environments while staying focused on achieving high-quality results under strict deadlines Eager to obtain a challenging position at a prestigious company like Dream Version that will expand my learning and build upon my developer skills.</p>
+                <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    <h2>programmer</h2>
+                <p>i as a student love being a programmer i like to build apps website and iot projects it really improves my programming skills</p>
+                <a href="#">learn more</a>
+                </div>
+             
+                
+             
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>app devlopment</h2>
+                <p>still learning to make apps but soon going to launch my own app which eases the difficulties of human beings
+                    
+                </p>
+                <a href="#">learn more</a>
+            </div>    
+                
+               
+            </div>
+        </div>
+
+
+        </div>
+</div>
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactleft">
+                <h1 class="subtitle">contact me</h1>
+                <p>    <i class="fa-solid fa-paper-plane"></i>  raekeshshaurya571@gmail.com</p>
+                <p>        <i class="fa-solid fa-phone"></i> +919910693302</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shaurya-rakesh-07162b252/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/Urstrul91042923" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/ShauryaCodes2004" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/resume (1) (2).pdf" target="_blank" class="btn btn2">download cv</a>
+
+            </div>
+
+            <div class="contactright">
+                <form >
+                    <input type="text" name="NAME" placeholder="yourname " required>
+                    <input type="text" name="email" placeholder="your email" required>
+                    <textarea name="message" rows="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                
+                </form>
+
+
+            </div>
+
+
+                
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @ <i class="fa-solid fa-heart"></i>  shaurya rakesh</p>
+
+    </div>
+</div>
+<script>
+
+var tablinks=document.getElementsByClassName("tablinks");
+var tabcontents=document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classlist.remove("active-link");
+
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classlist.remove("active-tab");
+        
+    }
+    event.currentTarget.classlist.add("active-link");
+
+}
+
+
+
+
+</script>
+   <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmeu(){
+        sidemeu.style.right="0";
+    }
+    function closemeu(){
+        sidemeu.style.right="-200px";
+    }
+   </script> 
+</body>
+</html>
